@@ -1,0 +1,12 @@
+<div>
+    <mat-form-field>
+        <input matInput [matDatepicker]="myDatepicker" [(ngModel)]="expiredDate">
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker #myDatepicker></mat-datepicker>
+    </mat-form-field>
+</div>
+<mat-form-field>
+    <input matInput type="text" (keyup.enter)="create()" [(ngModel)]="title">
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="create()">Create</button>
+<button mat-raised-button color="accent" id="delete" (click)="deleteCompleted()">Delete Completed</button>

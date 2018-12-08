@@ -1,0 +1,8 @@
+<mat-action-list>
+  <mat-list-item *ngFor="let todo of todoList; let i = index" [class.completed]="todo.completed">
+    <mat-checkbox id="todo{{i}}" [(ngModel)]="todo.completed" (keyup.enter)="checkItem(todo)">
+      {{ todo.title }}
+      {{ todo.expiredDate | date:'mediumDate'}}
+    </mat-checkbox>
+  </mat-list-item>
+</mat-action-list>

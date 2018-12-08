@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <mat-toolbar>
+    <span>
+      Welcome to {{ title }}!
+    </span>
+  </mat-toolbar>
+</div>
+<app-todo-form (submit)="addTodo($event)" (deleteCompletedList)="deleteCompletedList()"></app-todo-form>
+<app-todo-list [todoList]="todoList"></app-todo-list>
+
+
+<router-outlet></router-outlet>
